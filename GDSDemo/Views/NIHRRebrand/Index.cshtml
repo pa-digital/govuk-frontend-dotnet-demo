@@ -1,0 +1,101 @@
+﻿@using GDS.Components.Enum
+@using GDS.Components.ViewModels
+@{
+    ViewData["Title"] = "Rebrand Component Example";
+}
+@model GDSDemo.Models.NIHRRebrandViewModel;
+@section Styles {
+    <link href="@Url.Content("~/css/nihr.min.css")" rel="stylesheet" type="text/css" />
+}
+<div class="nihr-brand">
+    @Html.DisplayFor(model => model.BackLink)
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1></div>
+    </div>
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { novalidate = "novalidate" }))
+    {
+        @Html.DisplayFor(model => model.ErrorSummary)
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Name)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Email)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Password)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Interests)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.CountryOfResidence)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                @Html.DisplayFor(model => model.SubmitButton)
+            </div>
+        </div>
+    }
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m">Breadcrumbs</h2>
+            @Html.DisplayFor(model => model.Breadcrumbs)
+        </div>
+    </div>
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<h2 class="govuk-heading-m">Buttons</h2>
+		</div>
+		@for (int i = 0; i < Model.Buttons.Count; i++)
+		{
+			<div class="govuk-grid-column-one-third margin-bottom-medium">
+				@Html.DisplayFor(model => Model.Buttons[i])
+			</div>
+		}
+	</div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m">Details View</h2>
+            @Html.DisplayFor(model => model.DetailsView)
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m">Inset Text</h2>
+            @Html.DisplayFor(model => model.InsetText)
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m">Tags</h2>
+        </div>
+        @for (int i = 0; i < Model.Tags.Count; i++)
+        {
+            <div class="govuk-grid-column-one-quarter margin-bottom-medium">
+                @Html.DisplayFor(model => Model.Tags[i])
+            </div>
+        }
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m">Panel</h2>
+            @Html.DisplayFor(model => model.Panel)
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m">Warning</h2>
+            @Html.DisplayFor(model => model.Warning)
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+
+        @Html.Raw(ViewBag.ValidationScript)
+     });
+    </script>
+}
+

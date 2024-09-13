@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ComponentsDemo</title>
+    <link rel="stylesheet" href="~/lib/gds/dist/css/govuk.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @RenderSection("Styles", false)
+</head>
+<body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/application.js"></script>
+    <script src="~/lib/gds/dist/js/gds.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

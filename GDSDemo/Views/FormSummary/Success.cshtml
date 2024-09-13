@@ -1,0 +1,55 @@
+﻿@using GDS.Components.Enum
+@using GDS.Components.ViewModels
+@{
+    ViewData["Title"] = "Users Details";
+}
+@model GDSDemo.RequestModels.UserFormDataRequestModel;
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1></div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    @Model.Name
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Email
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    @Model.Email
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Interests
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    @if (Model.Interests != null)
+                    {
+                        <ul>
+                            @foreach (var item in Model.Interests)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    }
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Country Of Residence
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    @Model.CountryOfResidence
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>

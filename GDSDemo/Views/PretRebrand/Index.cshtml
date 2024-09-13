@@ -1,0 +1,55 @@
+﻿@using GDS.Components.Enum
+@using GDS.Components.ViewModels
+@{
+    ViewData["Title"] = "Getting to know you";
+}
+@model GDSDemo.Models.PretRebrandModel;
+@section Styles {
+    <link href="@Url.Content("~/css/pret.min.css")" rel="stylesheet" type="text/css" />
+}
+<div class="pret-brand">
+    @Html.DisplayFor(model => model.BackLink)
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1><p class="govuk-body">Tell us a bit about yourself!</p></div>
+    </div>
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { novalidate = "novalidate" }))
+    {
+        @Html.DisplayFor(model => model.ErrorSummary)
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.FirstName)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.LastName)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.PhoneNumber)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Email)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Password)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Location)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">@Html.EditorFor(model => model.MarketingChoices)</div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                @Html.DisplayFor(model => model.SubmitButton)
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+        @Html.Raw(ViewBag.ValidationScript)
+                     });
+    </script>
+}
+

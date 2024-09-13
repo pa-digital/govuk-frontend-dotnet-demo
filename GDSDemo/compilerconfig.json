@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/nihr.css",
+    "inputFile": "wwwroot/css/nihr.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pret.css",
+    "inputFile": "wwwroot/css/pret.scss"
+  }
+]

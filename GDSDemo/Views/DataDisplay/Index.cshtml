@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "How to display data";
+}
+@model GDSDemo.Models.DataDisplayViewModel;
+@Html.DisplayFor(model => model.BackLink)
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1></div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Accordion</h2>
+        @Html.DisplayFor(model => model.Accordion)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Tab Control</h2>
+        @Html.DisplayFor(model => model.Tab)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Standard Table</h2>
+        @Html.DisplayFor(model => model.Table)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Numeric Table</h2>
+        @Html.DisplayFor(model => model.NumericTable)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Custom Width Table</h2>
+        @Html.DisplayFor(model => model.CustomWidthTable)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Summary List</h2>
+        @Html.DisplayFor(model => model.SummaryList)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Borderless Summary List - Missing Info</h2>
+        @Html.DisplayFor(model => model.BorderLessMissingInfoSummaryList)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Summary Card List</h2>
+        @Html.DisplayFor(model => model.SummaryCards)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Task List</h2>
+        @Html.DisplayFor(model => model.Tasks)
+    </div>
+</div>

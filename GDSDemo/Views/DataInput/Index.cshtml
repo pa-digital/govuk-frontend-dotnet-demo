@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Data Input Components";
+}
+@model GDSDemo.Models.DataInputsViewModel;
+@Html.DisplayFor(model => model.BackLink)
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1></div>
+</div>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { novalidate = "novalidate" }))
+{
+    @Html.DisplayFor(model => model.ErrorSummary)
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Sort)</div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Location)</div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">@Html.EditorFor(model => model.DOB)</div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">@Html.EditorFor(model => model.PassportExpiry)</div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">@Html.EditorFor(model => model.NationalInsuranceNumber)</div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            @Html.DisplayFor(model => model.SubmitButton)
+        </div>
+    </div>
+}
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        @Html.Raw(ViewBag.ValidationScript)
+            });
+    </script>
+}

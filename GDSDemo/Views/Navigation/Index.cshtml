@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Navigation Components";
+}
+@model GDSDemo.Models.NavigationViewModel;
+@Html.DisplayFor(model => model.BackLink)
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1></div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Breadcrumbs</h2>
+        @Html.DisplayFor(model => model.Breadcrumbs)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Inverse Breadcrumbs</h2>
+        <div class="inverse-block padding-top-medium padding-bottom-medium">
+            @Html.DisplayFor(model => model.InverseBreadcrumbs)
+        </div>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Exit Page</h2>
+        @Html.DisplayFor(model => model.ExitPage)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Pagination - Standard</h2>
+        @Html.DisplayFor(model => model.StandardPagination)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m">Pagination - Min</h2>
+        @Html.DisplayFor(model => model.NoPrevPagination)
+    </div>
+    <div class="govuk-grid-column-one-half">
+        <h2 class="govuk-heading-m">Pagination - Max</h2>
+        @Html.DisplayFor(model => model.NoNextPagination)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Pagination - Large</h2>
+        @Html.DisplayFor(model => model.MidLargePagination)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Pagination - Content</h2>
+        @Html.DisplayFor(model => model.ContentPagination)
+    </div>
+</div>

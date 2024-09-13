@@ -1,0 +1,32 @@
+﻿@using GDS.Components.Enum
+@using GDS.Components.ViewModels
+@{
+    ViewData["Title"] = "Enter Registration Details";
+}
+@model GDSDemo.Models.RegistrationViewModel;
+@Html.DisplayFor(model => model.BackLink)
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1></div>
+</div>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { novalidate = "novalidate" }))
+{
+    @Html.DisplayFor(model => model.ErrorSummary)
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Email)</div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">@Html.EditorFor(model => model.Password)</div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            @Html.DisplayFor(model => model.SubmitButton)
+        </div>
+    </div>
+}
+@section Scripts {
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    @Html.Raw(ViewBag.ValidationScript)
+            });
+</script>
+}

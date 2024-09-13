@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Smaller Components";
+}
+@model GDSDemo.Models.ComponentsViewModel;
+@Html.DisplayFor(model => model.BackLink)
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full"><h1 class="govuk-heading-l">@ViewData["Title"]</h1></div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Buttons</h2>
+    </div>
+    @for (int i = 0; i < Model.Buttons.Count; i++)
+    {
+        <div class="govuk-grid-column-one-third margin-bottom-medium">
+            @Html.DisplayFor(model => Model.Buttons[i])
+        </div>
+    }
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Details View</h2>
+        @Html.DisplayFor(model => model.DetailsView)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Inset Text</h2>
+        @Html.DisplayFor(model => model.InsetText)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Tags</h2>
+    </div>
+    @for (int i = 0; i < Model.Tags.Count; i++)
+    {
+        <div class="govuk-grid-column-one-quarter margin-bottom-medium">
+            @Html.DisplayFor(model => Model.Tags[i])
+        </div>
+    }
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Panel</h2>
+        @Html.DisplayFor(model => model.Panel)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Warning</h2>
+        @Html.DisplayFor(model => model.Warning)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Phase Banner</h2>
+        @Html.DisplayFor(model => model.PhaseBanner)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Notification Banner - Alert</h2>
+        @Html.DisplayFor(model => model.AlertBanner)
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-m">Notification Banner - Success</h2>
+        @Html.DisplayFor(model => model.SuccessBanner)
+    </div>
+</div>

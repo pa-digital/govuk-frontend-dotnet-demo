@@ -1,0 +1,75 @@
+﻿@using GDS.Components.Enum
+@using GDS.Components.ViewModels
+@{
+    ViewData["Title"] = "Control List Demo";
+}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">@ViewData["Title"]</h1>
+        <ul>
+            <li>
+                @Html.ActionLink("Navigation", "", "Navigation", null, new { @class = "govuk-link" })
+                <ul class="margin-top-small margin-bottom-small">
+                    <li>Breadcrumbs</li>
+                    <li>Exit Page</li>
+                    <li>Buttons</li>                   
+                    <li>Pagination</li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("Components", "", "Components", null, new { @class = "govuk-link" })
+                <ul class="margin-top-small margin-bottom-small">
+                    <li>Buttons</li>
+                    <li>Details View</li>
+                    <li>Inset Text</li>
+                    <li>Tags</li>
+                    <li>Panel</li>
+                    <li>Warning</li>
+                    <li>Phase Banner</li>
+                    <li>Notification</li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("Data Display", "", "DataDisplay", null, new { @class = "govuk-link" })
+                <ul class="margin-top-small margin-bottom-small">
+                    <li>Accordion</li>
+                    <li>Tab Control</li>
+                    <li>Table</li>
+                    <li>Summary List</li>
+                    <li>Tasks</li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("Data Inputs", "", "DataInput", null, new { @class = "govuk-link" })
+                <ul class="margin-top-small margin-bottom-small">
+                    <li>Select</li>
+                    <li>Date Input</li>
+                    <li>Custom Regex Validator</li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("Form Demo with Error Summary", "", "FormSummary", null, new { @class = "govuk-link" })
+                <ul class="margin-top-small margin-bottom-small">
+                    <li>Text Input</li>
+                    <li>Checkbox List</li>
+                    <li>Radio Buttons</li>
+                    <li>Validation &amp; Error Summary</li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("Registration Form", "", "Registration", null, new { @class = "govuk-link" })
+                <ul class="margin-top-small margin-bottom-small">
+                    <li>Email Input</li>
+                    <li>Password Input</li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("NIHR Rebrand Example", "", "NIHRRebrand", null, new { @class = "govuk-link" })
+            </li>
+            <li>
+                @Html.ActionLink("Pret A Manger Rebrand Example", "", "PretRebrand", null, new { @class = "govuk-link" })
+            </li>
+        </ul>        
+        
+    </div>
+</div>
